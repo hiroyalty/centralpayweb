@@ -1,0 +1,12 @@
+RewriteEngine On
+
+RewriteCond $1 !^(index\.php|resources|robots\.txt)
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_URI} !^/sub
+
+RewriteRule ^(.*)$ index.php [QSA,L]
+
